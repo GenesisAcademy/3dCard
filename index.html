@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div id="card" class="card">
+            <div class="card-front">
+                <input type="text" placeholder="Номер карты..." class="card-input card-number">
+                <input type="text" placeholder="Имя владельца..." class="card-input card-name">
+                <input type="text" placeholder="Дата..." class="card-input card-date">
+            </div>
+            <div class="card-back">
+                <input type="text"  placeholder="ccv" class="card-input card-ccv" >
+            </div>
+            
+        </div>
+        <div class="btn" onclick="cardFlip()">Перевернуть</div>
+    </form>
+
+
+    <script>
+        function cardFlip() {
+            var el = document.getElementById('card');
+            el.className == 'card' ?  el.setAttribute('class', 'card active') : el.setAttribute('class', 'card');
+        }
+    </script>
+</body>
+</html>
