@@ -1,2 +1,2 @@
 # 3dCard
-3d flip car on HTML and CSS
+3D банковская карточка на HTML + CSS (валидация на JS)
