@@ -9,25 +9,45 @@
 </head>
 <body>
     <form>
-        <div id="card" class="card">
-            <div class="card-front">
-                <input type="text" placeholder="Номер карты..." class="card-input card-number">
-                <input type="text" placeholder="Имя владельца..." class="card-input card-name">
-                <input type="text" placeholder="Дата..." class="card-input card-date">
-            </div>
-            <div class="card-back">
-                <input type="text"  placeholder="ccv" class="card-input card-ccv" >
-            </div>
-            
+        <div class="container">
+        	<div id="card" class="card">
+	            <div class="card-front">
+		            <div class="logo">
+		            	<img src="images/logo.png" alt="GENESIS">
+		            </div>
+	                <div class="card-input card-number">
+	                	<label for="number">Номер карты*</label>
+	                	<input type="text" id="number" placeholder="XXXX XXXX XXXX XXXX" class="">
+	                </div>
+	                <div class="card-input card-name">
+	                	<label for="name">Имя вадельца*</label>
+	                	<input type="text" id="name" placeholder="IVANOV IVAN" class="">
+	                </div>
+	                <div class="card-input card-date">
+	                	<label for="date">Срок действия*</label>
+	                	<input type="text" id="date" placeholder="04/22" class="">
+	                </div>
+	            </div>
+	            <div class="card-back">
+	            	<div class="black-line">
+	            		<div class="card-ccv">
+	            			<input type="text"  id="ccv" placeholder="ccv" class="" >
+	            		</div>
+	            	</div>
+	            	<p>
+	            		Справочная информация. Номера телефонов. Правила обращения Далеко-далеко за словесными горами в стране, гласных и согласных живут.
+	            	</p>
+	            </div>
+        	</div>
+        	<div class="btn" onclick="cardFlip()">Перевернуть</div>
         </div>
-        <div class="btn" onclick="cardFlip()">Перевернуть</div>
     </form>
 
 
     <script>
         function cardFlip() {
             var el = document.getElementById('card');
-            el.className == 'card' ?  el.setAttribute('class', 'card active') : el.setAttribute('class', 'card');
+            el.className == 'card' ?  el.setAttribute('class', 'card flip') : el.setAttribute('class', 'card');
         }
     </script>
 </body>

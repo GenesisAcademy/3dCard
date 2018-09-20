@@ -1,97 +1,118 @@
-.card{
-    position: relative;
-    text-align: center;
-    margin: 100px 300px;
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #fefefe;
+    font-family: Arial, sans-serif;
+}
+.container{
     width: 420px;
     height: 265px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+}
+.card{
+    position: relative;
+    width: 100%;
+    height: 100%;
     transform-style: preserve-3d;
     perspective: 600px;
-    border: 1px solid #ccc;
-    border-radius: 16px;
+    border-radius: 5px;
     cursor: pointer;
     
 }
-
-
+.card-front{
+    padding: 15px;
+}
 .card-front,
 .card-back{
-    width: 420px;
-    height: 265px;
+    height: 100%;
+    width: 100%;
     position: absolute;
     backface-visibility: hidden;
     transition: all 2s ease;
-}
-.card-front{
-    background-image: url(images/front.png);
+    background-color: rgba(109,14,177,.95);
+    border-radius: 5px;
 }
 .card-back{
     transform: rotateY(180deg);
-    background-image: url(images/back.png);
 }
-.card.active .card-back{
+.card.flip .card-back{
     transform: rotateY(360deg);
 }
-.card.active .card-front{
+.card.flip .card-front{
     transform: rotateY(180deg);
 }
 
 
 .card-input{
     position: absolute;
-    background-color: transparent;
-    color: #ffd0ca;
-    border: 1px solid transparent;
+}
+input{
+    display: block;
+    padding: 7px 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+label{
+    color: #fff;
+
+}
+.logo{
+    text-align: right;
 }
 .card-input:focus{
     border: 1px solid #ccc;
 }
 
 .card-number{
-    position: absolute;
-    top: 139px;
-    width: 370px;
-    height: 40px;
-    left: 23px;
-    font-size: 33px;
-    letter-spacing: 2.8px;
-    color: #ffd0ca;
-    background-color: transparent;
+    top: 85px;
+    width: 100%;
+}
+.card-number input{
+    width: 70%;
 }
 .card-date{
-    width: 64px;
-    height: 23px;
+    bottom: 30px;
+    right: 15px;
    
-    top: 190px;
-    left: 23px;
-   
-    font-size: 21px;
-    letter-spacing: 2.4px;
-   
+}
+.card-date input{
+    width: 60px;
 }
 .card-name{
-    width: 271px;
-    height: 26px;
-    bottom: 10px;
-    left: 23px;
-    font-size: 21px;
-    letter-spacing: 2.4px;
-    text-transform: uppercase;
+    bottom: 30px;
+}
+.black-line{
+    width: 100%;
+    background-color: #000;
+    margin-top: 60px;
+    text-align: right;
 }
 .card-ccv{
-    right: 26px;
-    top: 101px;
-    width: 53px;
-    height: 25px;
-    background-color: #fff;
+    background-color: #000;
     color: #000;
-    font-size: 19px;
-    letter-spacing: 2.4px;
-    text-align: center;
 }
+.card-ccv input{
+    width: 50px;
+    display: inline-block;
+    margin-top: 0;
+}
+.card-back p{
+    color: #fff;
+    padding: 15px;
+    font-size: 13px;
 
+}
 .btn{
-        position: absolute;
-        bottom: 0;
-        background-color: red;
-        cursor: pointer;
+    display: inline-block;
+    background-color: rgba(109,14,177,.95);
+    color: #fff;
+    padding: 5px 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 4px;
 }
