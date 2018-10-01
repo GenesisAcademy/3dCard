@@ -17,21 +17,21 @@
 		            </div>
 	                <div class="card-input card-number">
 	                	<label for="number">Номер карты*</label>
-	                	<input type="text" id="number" placeholder="XXXX XXXX XXXX XXXX" class="">
+	                	<input type="text" id="number" placeholder="XXXX XXXX XXXX XXXX">
 	                </div>
 	                <div class="card-input card-name">
 	                	<label for="name">Имя вадельца*</label>
-	                	<input type="text" id="name" placeholder="IVANOV IVAN" class="">
+	                	<input type="text" id="name" placeholder="IVANOV IVAN">
 	                </div>
 	                <div class="card-input card-date">
 	                	<label for="date">Срок действия*</label>
-	                	<input type="text" id="date" placeholder="04/22" class="">
+	                	<input type="text" id="date"  maxlength="5" placeholder="04/22">
 	                </div>
 	            </div>
 	            <div class="card-back">
 	            	<div class="black-line">
 	            		<div class="card-ccv">
-	            			<input type="text"  id="ccv" placeholder="ccv" class="" >
+	            			<input type="text"  id="ccv" placeholder="ccv" maxlength="3">
 	            		</div>
 	            	</div>
 	            	<p>
@@ -44,11 +44,6 @@
     </form>
 
 
-    <script>
-        function cardFlip() {
-            var el = document.getElementById('card');
-            el.className == 'card' ?  el.setAttribute('class', 'card flip') : el.setAttribute('class', 'card');
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
