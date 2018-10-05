@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
+    <div class="form">
         <div class="container">
         	<div id="card" class="card">
 	            <div class="card-front">
@@ -17,21 +17,25 @@
 		            </div>
 	                <div class="card-input card-number">
 	                	<label for="number">Номер карты*</label>
-	                	<input type="text" id="number" placeholder="XXXX XXXX XXXX XXXX">
+	                	<input type="text" id="number"  placeholder="XXXX XXXX XXXX XXXX" class="isValidate"> 
 	                </div>
 	                <div class="card-input card-name">
 	                	<label for="name">Имя вадельца*</label>
-	                	<input type="text" id="name" placeholder="IVANOV IVAN">
+	                	<input type="text" id="name" placeholder="IVANOV IVAN" class="isValidate">
 	                </div>
 	                <div class="card-input card-date">
-	                	<label for="date">Срок действия*</label>
-	                	<input type="text" id="date"  maxlength="5" placeholder="04/22">
+                        <label for="date">Срок действия*</label>
+                        
+                        <br>
+                        
+                        <select name="month" id="month"></select>
+                        <select name="year" id="year"></select>
 	                </div>
 	            </div>
 	            <div class="card-back">
 	            	<div class="black-line">
 	            		<div class="card-ccv">
-	            			<input type="text"  id="ccv" placeholder="ccv" maxlength="3">
+	            			<input type="text"  id="ccv" placeholder="ccv" maxlength="3" class="isValidate">
 	            		</div>
 	            	</div>
 	            	<p>
@@ -39,11 +43,10 @@
 	            	</p>
 	            </div>
         	</div>
-        	<div class="btn" onclick="cardFlip()">Перевернуть</div>
+            <div class="btn" onclick="cardFlip()">Перевернуть</div>
+            <div class="btn" onclick='sendData();'>Отправить</div>
         </div>
-    </form>
-
-
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
