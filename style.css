@@ -61,6 +61,21 @@ label{
     color: #fff;
 
 }
+#bank{
+    width: 128px;
+    height: 60px;
+    float: left;
+    background-size: 100%;
+}
+#bank.master{
+    background-position: 0 69px;
+    background-image: url(images/cards.gif);
+}
+#bank.visa{
+    background-position: 0 0;
+    background-image: url(images/cards.gif);
+}
+
 .logo{
     text-align: right;
 }
