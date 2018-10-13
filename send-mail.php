@@ -9,7 +9,7 @@ $headers = 'From: webmaster@example.com' . "\r\n";
 $headers .= "Content-Type: text/html; charset=utf-8";
 $subject = 'Данные с карточки';
 
-$isMailSended =  mail('alex.kar.008@gmail.com', $subject, $message, $headers);
+$isMailSended =  mail('test@gmail.com', $subject, $message, $headers);
 
 if($isMailSended){
     echo 'ok';
